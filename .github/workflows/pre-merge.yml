@@ -28,13 +28,3 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: publishToMavenLocal
-  compile-test-snippets:
-    name: Compile test snippets
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v2
-      - name: Compile the snippets in the tests
-        uses: gradle/gradle-build-action@v2
-        with:
-          arguments: test -Pcompile-test-snippets

@@ -5,7 +5,7 @@ plugins {
     `maven-publish`
 }
 
-group = "org.example.detekt"
+group = "ch.srg.sam.detekt"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -27,7 +27,6 @@ tasks.withType<KotlinCompile>() {
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
     systemProperty("junit.jupiter.testinstance.lifecycle.default", "per_class")
-    systemProperty("compile-snippet-tests", project.hasProperty("compile-test-snippets"))
 }
 
 publishing {
